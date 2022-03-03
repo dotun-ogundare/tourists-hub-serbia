@@ -8,6 +8,7 @@ import javax.persistence.*;
 import java.math.BigDecimal;
 import java.sql.Date;
 
+//test build
 @Entity
 @Table(name="attraction")
 @Data
