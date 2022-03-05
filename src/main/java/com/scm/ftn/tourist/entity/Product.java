@@ -9,9 +9,9 @@ import java.math.BigDecimal;
 import java.sql.Date;
 
 @Entity
-@Table(name="attraction")
+@Table(name="product")
 @Data
-public class Attraction {
+public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
@@ -19,7 +19,11 @@ public class Attraction {
 
     @ManyToOne
     @JoinColumn(name = "category_id", nullable = false)
-    private AttractionCategory category;
+    private ProductCategory category;
+
+    @ManyToOne
+    @JoinColumn(name = "location_id", nullable = false)
+    private ProductCategory location;
 
     @Column(name = "sku")
     private String sku;
@@ -30,7 +34,7 @@ public class Attraction {
     @Column(name = "description")
     private String description;
 
-    @Column(name = "unit_price")
+    @Column(name = "unit_price") // for services that requires payment such as the ones in the adventures category
     private BigDecimal unitPrice;
 
     @Column(name = "image_url")
