@@ -1,7 +1,7 @@
 version:  "3.8"
 services:
   backend:
-    image: "coedev/tourists-hub-serbia:v1-29.3.2022.17.40.58"
+    image: "coedev/tourists-hub-serbia:v1-30.3.2022.14.33.57"
     ports:
       - "80:8080"
     restart: "always"
