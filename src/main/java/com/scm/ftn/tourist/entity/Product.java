@@ -43,6 +43,9 @@ public class Product {
     @Column(name = "active")
     private boolean active;
 
+    /*@Column(name = "is_tangible") // This checks whether it is a tangible product or not
+    private boolean isTangible; // currently managing this with category since all tangibles will be under arts and souvinirs*/
+
     @Column(name = "visitation_count") //i.e 20 tourists on this hub have visited this place
     private int visitationCount;
 

@@ -8,7 +8,7 @@ import java.util.Set;
 
 @Entity
 @Table(name = "product_category")
-@Getter
+@Getter  //because @Data generates bug in one to many/relationship entity
 @Setter
 public class ProductCategory {
 
